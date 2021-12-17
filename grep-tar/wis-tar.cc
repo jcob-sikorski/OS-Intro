@@ -66,14 +66,7 @@ int main(int argc, char const *argv[])
         }
         char *file_size_bin = (char*) malloc(31);
         file_size_bin = dectobin(src_info.st_size);
-        /* sprintf(file_size_bin, "%d", dectobin(src_info.st_size)); */
 
-        /* for (int j = 0; j < strlen(file_size_bin); j++) {
-            fputc(file_size_bin[j], dst_file);
-        }
-        for (int j = strlen(file_size_bin); j < 31; j++) {
-            fputc('0', dst_file);
-        } */
         fprintf(dst_file, file_size_bin);
         
         char *buffer = (char*) malloc(src_info.st_size);
