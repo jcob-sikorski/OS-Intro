@@ -33,8 +33,8 @@ int main(int argc, char const *argv[])
       + ( requestEnd.tv_nsec - requestStart.tv_nsec )
       / 1E9;
 
-    double total = total_time/(NUMPAGES*jump);
+    double time_per_page = total_time/NUMPAGES;
 
-    printf("%f", total);
+    printf("%f", time_per_page);
     return 0;
 }
